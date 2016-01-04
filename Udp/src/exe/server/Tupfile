@@ -1,0 +1,19 @@
+LIBNAME = server
+
+EXENAME = server.exe
+
+CFLAGS += -g -Wall -DOMN_PLATFORM_UNIX 
+CFLAGS += -I../../ -I../../../Include
+
+OBJDIR = ../../../obj/$(LIBNAME)
+LIBDIR = ../../../obj
+EXLIBDIR = ../../../Lib
+
+DDOBJ += -lpthread 
+
+DOBJ += -L ../../../Runtime_lib 
+
+OBJ+=$(LIBDIR)/libUtil.a
+
+: foreach *.c *.cpp |> g++ $(CFLAGS) -c %f -o %o |> $(OBJDIR)/%B.o
+: $(OBJDIR)/*.o | ../../../<mod> |> g++ -rdynamic -Wl,--no-as-needed $(CFLAGS) %f $(DOBJ) -Xlinker --start-group $(OBJ) -Xlinker --end-group $(DOBJ) $(DDOBJ) -o %o  |> $(LIBDIR)/$(EXENAME)
