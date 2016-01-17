@@ -1,0 +1,38 @@
+div
+{
+    display: block;
+}
+div.tree
+{
+    display: block;
+    background: #47484b;
+    width: 200px;
+    height: auto;
+}
+
+span.triangle-right
+{
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 3px solid transparent;
+    border-left: 6px solid  #7e7e7e;
+    border-bottom: 3px solid transparent;
+    content: '\25BC';
+}
+
+span.triangle-down
+{
+    display: block;
+    width: 0;
+    height: 0;
+    border-right: 3px solid transparent;
+    border-left: 3px solid  transparent;
+    border-top: 6px solid #7e7e7e;
+}
+
+div.tree-node
+{
+    height: 22px;
+    margin-left: 8px;
+}

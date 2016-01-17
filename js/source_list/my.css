@@ -1,0 +1,78 @@
+div.tree
+{
+    background: #47484b;
+    width: 200px;
+}
+
+/*span.triangle-right*/
+{
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 3px solid transparent;
+    border-left: 6px solid  #7e7e7e;
+    border-bottom: 3px solid transparent;
+    content: '\25BC';
+}
+
+/*span.triangle-down*/
+{
+    display: block;
+    width: 0;
+    height: 0;
+    border-right: 3px solid transparent;
+    border-left: 3px solid  transparent;
+    border-top: 6px solid #7e7e7e;
+}
+
+
+ul.tree, ul.tree ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-family: "SourceCodePro-Medium"
+}
+
+ul.tree ul
+{
+    margin-left: 8px;
+}
+
+span
+{
+    display: block;
+}
+
+span.tree-node
+{
+    color: #a5b9bd;
+    display: block;
+    cursor: pointer;
+}
+
+span.tree-leaf
+{
+    cursor: default;
+}
+
+/*span.tree-left-click*/
+{
+    background: #2b2e30;
+    color: #74ddf1 
+}
+
+ul.tree li
+{
+    margin: 0;
+    padding: 0 12px;
+    line-height: 20px;
+    color: #f8f8f8;
+    font-weight: bold;
+}
+
+ul.tree li.last 
+{
+    background: #fff;
+}

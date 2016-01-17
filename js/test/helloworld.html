@@ -1,0 +1,17 @@
+<!doctype html>
+<html >
+    <head>
+        <script src="../other_js/angular.js"></script>
+    </head>
+    <body>
+        <div ng-app="myApp" ng-controller="myCtrl">
+            <h1>{{carname}}</h1>
+        </div>
+    </body>
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller("myCtrl", function($scope) {
+            $scope.carname = "Volvo"
+        })
+    </script>
+</html>
